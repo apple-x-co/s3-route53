@@ -1,0 +1,9 @@
+{
+  "require": {
+    "aws/aws-sdk-php": "^3.142",
+    "symfony/dotenv": "^5.1"
+  },
+  "require-dev": {
+    "roave/security-advisories": "dev-master"
+  }
+}
