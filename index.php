@@ -71,6 +71,19 @@ if ($bucket_exist) {
         print_r($result);
         exit();
     }
+
+    // upload 404.html
+    print 'Upload 404.html to S3 bucket.' . PHP_EOL;
+    $result = $s3client->putObject([
+        'ACL'    => 'public-read',
+        'Bucket' => $fqdn,
+        'Key'    => '404.html',
+        'Body'   => fopen('404.html', 'rb')
+    ]);
+    if ($result['@metadata']['statusCode'] !== 200) {
+        print_r($result);
+        exit();
+    }
 }
 
 // request certificate
