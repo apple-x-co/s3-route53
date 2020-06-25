@@ -15,4 +15,4 @@
 * Certificate の DNS認証
 `xxx.your-domain. 600 IN CNAME zzz.yyy.acm-validations.aws.`
 * CloudFront への転送
-`xxx.your-domain. 600 IN CNAME www.cloudfront.net.`
+`xxx.your-domain. 600 IN CNAME vvv.cloudfront.net.`
