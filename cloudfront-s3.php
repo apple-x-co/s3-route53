@@ -108,7 +108,7 @@ if ($certificate_arn === null) {
         'DomainName'       => $fqdn,
         'IdempotencyToken' => '12345', // 証明書作成リクエストを識別するトークン。同じものを使用するとリクエストが重複しない
         'Options'          => [
-            'CertificateTransparencyLoggingPreference' => 'DISABLED',
+            'CertificateTransparencyLoggingPreference' => 'ENABLED',
         ],
         'ValidationMethod' => 'DNS',
     ]);

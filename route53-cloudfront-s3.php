@@ -158,7 +158,7 @@ if ($certificate_arn === '') {
         'DomainName'       => $fqdn,
         'IdempotencyToken' => '12345', // 証明書作成リクエストを識別するトークン。同じものを使用するとリクエストが重複しない
         'Options'          => [
-            'CertificateTransparencyLoggingPreference' => 'DISABLED',
+            'CertificateTransparencyLoggingPreference' => 'ENABLED',
         ],
         'ValidationMethod' => 'DNS',
     ]);
@@ -270,7 +270,7 @@ if ($cloud_front_id === '') {
             'ViewerCertificate' => [
                 'CloudFrontDefaultCertificate' => false,
                 'ACMCertificateArn'            => $certificate_arn,
-                'MinimumProtocolVersion'       => 'TLSv1.1_2016',
+                'MinimumProtocolVersion'       => 'TLSv1.2_2018',
                 'SSLSupportMethod'             => 'sni-only'
             ],
             'DefaultRootObject' => 'index.html',
